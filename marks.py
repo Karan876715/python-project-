@@ -6,7 +6,7 @@ total = s1 + s2 + s3
 percentage = (total/300)*100
 
 print("total marks:",total)
-print("percentage:",percentage)
+print("percentage:",percentage,"%")
 if percentage >=90:
     print("grade:A")
 elif percentage >=80:
@@ -17,4 +17,3 @@ elif percentage >=60:
     print("grade:D")
 else:
     print("grade:F")
-    
