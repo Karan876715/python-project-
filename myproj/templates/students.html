@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Students List{% endblock %}
+
+{% block content %}
+<h2>Student Marks Table</h2>
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Name</th>
+        <th>Roll No</th>
+        <th>Marks</th>
+        <th>Remark</th>
+    </tr>
+    {% for student in students %}
+    <tr>
+        <td>{{ student.name }}</td>
+        <td>{{ student.roll }}</td>
+        <td>{{ student.marks }}</td>
+        <td>
+            {% if student.marks >= 90 %}
+                Excellent
+            {% elif student.marks >= 80 %}
+                Good
+            {% elif student.marks >= 60 %}
+                Average
+            {% else %}
+                Needs Improvement
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %} 
+</table>
+{% endblock %}
