@@ -1,19 +1,27 @@
 {% extends "base.html" %}
-
-{% block title %}Students List{% endblock %}
+{% block title %}Students - College Portal{% endblock %}
 
 {% block content %}
+<div class =d-flex justify-content-between align-items-center mb-4>
+    <h1>Students List</h1>
+    <p> Total : {{ students|length }} </p>
+    <a href="{{ url_for('students_page') }}" class="btn btn-primary">View All Student</a>
+    <spam class="badge bg-secondary fs-6">
+
 <h2>Student Marks Table</h2>
-<table border="1" cellpadding="8">
+</spam>
+</div>
+<table class = "table table-striped table-hover" border="1">
+    <thead class="table-dark">
     <tr>
         <th>Name</th>
         <th>Roll No</th>
         <th>Marks</th>
-        <th>Remark</th>
+        <th>Grade</th>
     </tr>
     {% for student in students %}
     <tr>
-        <td>{{ student.name }}</td>
+        <td class="fw-bold">{{ student.name }}</td>
         <td>{{ student.roll }}</td>
         <td>{{ student.marks }}</td>
         <td>
