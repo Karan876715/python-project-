@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online College Admission Portal</title>
+<style>
+    * {margin:0; padding:0; font-family: 'Segoe UI', sans-serif;}
+    body {
+        height:100vh;
+        background: url('https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200') no-repeat center fixed;
+        background-size: cover;
+        backdrop-filter: blur(8px);
+        display:flex; justify-content:center; align-items:center;
+    }
+    .main-card {
+        background: rgba(230, 240, 255, 0.95); 
+        width: 420px; 
+        padding: 30px 25px;
+        border-radius: 15px; 
+        box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        text-align: center;
+    }
+    .logo {
+        width: 70px; height: 70px; margin: 0 auto 15px;
+        background: white; border-radius: 50%;
+        display:flex; justify-content:center; align-items:center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .logo img {width: 45px;}
+    h1 {
+        color: #1a237e; 
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .subtitle {
+        color: #555; 
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .welcome {
+        color: #333; 
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .btn {
+        width: 100%; 
+        padding: 12px; 
+        margin: 8px 0;
+        border: none;
+        border-radius: 8px; 
+        font-weight: bold; 
+        cursor: pointer;
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+    .btn-blue {background: #2f4fff;}
+    .btn-orange {background: #ff8c00;}
+    .btn-green {background: #28a745;}
+    .btn-red {background: #dc3545;}
+    .btn:hover {opacity: 0.9;}
+</style>
+</head>
+<body>
+<div class="main-card">
+    <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="logo">
+    </div>
+    <h1>Online College Admission Portal</h1>
+    <p class="subtitle">OCAP - Your Gateway to Higher Education</p>
+    
+    <p class="welcome">Welcome! Krupaya khali option paiki ek nivada</p>
+
+    <a href="/form" class="btn btn-blue">New Admission Form</a>
+    <a href="/students" class="btn btn-orange">Registered Students List</a>
+    <a href="/student_login" class="btn btn-green">Student Login</a>
+    <a href="/admin_login" class="btn btn-red">Admin Login</a>
+</div>
+</body>
+</html>

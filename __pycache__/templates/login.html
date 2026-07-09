@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #55efc4, #81ecec);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            width: 350px;
+        }
+        h2 {
+            color: #00b894;
+            text-align: center;
+            font-weight: bold;
+        }
+        label {
+            font-weight: bold;
+            color: #2d3436;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 2px solid #00b894;
+            border-radius: 6px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #00b894;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #00997a;
+        }
+        a {
+            color: #00b894;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>LOGIN</h2>
+        <form action="/login" method="POST">
+            <label>Username:</label>
+            <input type="text" name="username" placeholder="Enter Username" required>
+
+            <label>Password:</label>
+            <input type="password" name="password" placeholder="Enter Password" required>
+
+            <button type="submit">LOGIN</button>
+        </form>
+        <p style="text-align:center;">Don't have account? <a href="/register">Register Here</a></p>
+    </div>
+</body>
+</html>
