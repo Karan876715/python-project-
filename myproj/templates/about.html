@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}About - College Portal{% endblock %}
+
+{% block content %}
+<div class =d-flex justify-content-between align-items-center mb-4>
+ <div class="col-md-8">
+    <div class="card shadow">
+        <div class ="card-header bg-secondary text-white">
+            <h4 class="md-2"> About this project</h4>
+            </div>
+            </div class="card-body">
+            <p class="card-text">This project is a simple Flask application that demonstrates how to manage stuent information and display it inn a user-friendly way. It includes features such as listing students,
+                </p>
+                <hr>
+                <h5 class="md-2">Technologies Used</h5>
+                <ul>
+                    <li>Python 3.14</li>
+                    <li>Flask web framework</li>
+                    <li>jinja2 template engine</li>
+                    <li>Bootstrap</li>
+                    <a href="{{url_for('home')}}"
+                     class="btn btn-primary mt-3">Back to Home</a>
+                </ul>
+             </div>
+        </div> 
+    </div>
+</div>
+{% endblock %}
+    
