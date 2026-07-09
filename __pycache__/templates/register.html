@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Page</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #74b9ff, #a29bfe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            width: 350px;
+        }
+        h2 {
+            color: #0984e3;
+            text-align: center;
+            font-weight: bold;
+        }
+        label {
+            font-weight: bold;
+            color: #2d3436;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 2px solid #74b9ff;
+            border-radius: 6px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #0984e3;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0652DD;
+        }
+        a {
+            color: #0984e3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>CREATE ACCOUNT</h2>
+        <form action="/register" method="POST">
+            <label>Full Name:</label>
+            <input type="text" name="fullname" placeholder="Enter Full Name" required>
+
+            <label>Username:</label>
+            <input type="text" name="username" placeholder="Enter Username" required>
+
+            <label>Password:</label>
+            <input type="password" name="password" placeholder="Enter Password" required>
+
+            <button type="submit">REGISTER</button>
+        </form>
+        <p style="text-align:center;">Already have an account? <a href="/login">Login Here</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Login</title>
+<style>
+body{background:url('/static/bg.jpg') center/cover fixed; height:100vh; display:flex; justify-content:center; align-items:center}
+.box{background:rgba(255,255,255,0.95); padding:30px; border-radius:12px; width:350px}
+input{width:100%; padding:10px; margin:8px 0; border:1px solid #ccc; border-radius:5px}
+button{width:100%; padding:12px; background:#d50000; color:white; border:none; border-radius:5px; font-weight:bold}
+h2{text-align:center; color:#d50000}
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Admin Login</h2>
+<form method="POST">
+    <label>Username</label>
+    <input type="text" name="username" required>
+    <label>Password</label>
+    <input type="password" name="password" required>
+    <button type="submit">Login</button>
+</form>
+<p style="text-align:center; margin-top:10px; font-size:13px; color:gray;">
+Demo: admin / admin123
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div style="max-width: 400px; margin: 40px auto; padding: 30px; background: white; border-radius: 10px; box-shadow: 0 0 15px #ccc; text-align: center;">
+    
+    <h2 style="color: #28a745;">Pay Admission Fee</h2>
+    <p>Scan and Pay ₹1 to Complete Admission</p>
+
+    <!-- TUZHA UPI ID ITH TAK -->
+   <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=shindekarandeepak@okaxis&pn=Govt%20Polytechnic&am=1" 
+     width="250" style="margin: 20px 0; border: 2px solid #ddd; padding: 10px;">
+
+    <p style="font-size: 24px; font-weight: bold; color: #000;">Amount: ₹1</p>
+
+    <a href="/success" 
+       style="display: inline-block; 
+              margin-top: 10px;
+              background: #28a745; 
+              color: white; 
+              padding: 12px 30px; 
+              text-decoration: none; 
+              border-radius: 8px; 
+              font-size: 18px;">
+       I Have Paid
+    </a>
+
+</div>
+{% endblock %}
