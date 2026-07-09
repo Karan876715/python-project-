@@ -1,41 +1,34 @@
-{% extends "base.html" %}
-{% block title %}Students - College Portal{% endblock %}
-
-{% block content %}
-<div class =d-flex justify-content-between align-items-center mb-4>
-    <h1>Students List</h1>
-    <p> Total : {{ students|length }} </p>
-    <a href="{{ url_for('students_page') }}" class="btn btn-primary">View All Student</a>
-    <spam class="badge bg-secondary fs-6">
-
-<h2>Student Marks Table</h2>
-</spam>
-</div>
-<table class = "table table-striped table-hover" border="1">
-    <thead class="table-dark">
-    <tr>
-        <th>Name</th>
-        <th>Roll No</th>
-        <th>Marks</th>
-        <th>Grade</th>
-    </tr>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Students</title>
+    <style>
+        body { font-family: Arial; background: #f2f2f2; text-align: center; }
+       .card {
+            display: inline-block;
+            margin: 15px;
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            width: 200px;
+        }
+       .card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* gol DP sathi */
+            object-fit: cover;
+        }
+       .card h3 { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Our Students</h1>
     {% for student in students %}
-    <tr>
-        <td class="fw-bold">{{ student.name }}</td>
-        <td>{{ student.roll }}</td>
-        <td>{{ student.marks }}</td>
-        <td>
-            {% if student.marks >= 90 %}
-                Excellent
-            {% elif student.marks >= 80 %}
-                Good
-            {% elif student.marks >= 60 %}
-                Average
-            {% else %}
-                Needs Improvement
-            {% endif %}
-        </td>
-    </tr>
-    {% endfor %} 
-</table>
-{% endblock %}
+    <div class="card">
+        <img src="{{ url_for('static', filename=student[1].replace('static\\','').replace('static/','')) }}" alt="DP">
+        <h3>{{ student[0] }}</h3>
+    </div>
+    {% endfor %}
+</body>
+</html>

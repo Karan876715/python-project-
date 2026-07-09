@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students List</title>
+    <style>
+        body {background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/267392/pexels-photo-267392.jpeg?auto=compress&cs=tinysrgb&w=1920') no-repeat center fixed; background-size: cover; display: flex; align-items: center; justify-content: center; height: 100vh;}
+    .container {background: rgba(255,255,255,0.97); padding: 40px; border-radius: 20px; width: 500px; text-align: center;}
+        h2 {color: #004aad;}
+        th {background: #004aad; color: white; padding: 15px; font-size: 20px;}
+        td {padding: 15px; font-size: 18px; font-weight: bold;}
+        a {display: inline-block; margin-top: 20px; padding: 12px 25px; background: #004aad; color: white; text-decoration: none; border-radius: 8px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>REGISTERED STUDENTS</h2>
+        <table style="width:100%;">
+            <tr><th>NAME STUDENT</th></tr>
+            {% for s in students %}<tr><td>{{ s[1] }}</td></tr>{% endfor %}
+        </table>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>

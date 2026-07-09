@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Fee Management - Home</title>
+    <style>
+        body {font-family: Arial; background: #f5f5f5; margin: 0;}
+        .navbar {background: #111; color: white; padding: 15px 30px; display: flex; justify-content: space-between;}
+        .navbar a {color: #aaa; margin: 0 10px; text-decoration: none;}
+        .navbar a:hover {color: white;}
+        .container {text-align: center; padding: 100px 20px;}
+        .btn {background: #0066ff; color: white; padding: 12px 25px; border: none; border-radius: 5px; text-decoration: none; margin: 10px;}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2>College Fee Management</h2>
+        <div>
+            <a href="/">🏠 Home page</a>
+            <a href="/register">📝 Register page</a>
+            <a href="/login">🌐 Login page</a>
+            <a href="/students">👨‍🎓 Students page</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Welcome to College Fee Management System</h1>
+        <p>Student chi fee manage karne sathi sopa system</p>
+        <a href="/login" class="btn">Admin Login</a>
+        <a href="/register" class="btn">Register</a>
+    </div>
+</body>
+</html>
+#### File 3: templates/register.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <style>
+        body {font-family: Arial; background: #f5f5f5; margin: 0;}
+        .navbar {background: #111; color: white; padding: 15px 30px; display: flex; justify-content: space-between;}
+        .navbar a {color: #aaa; margin: 0 10px; text-decoration: none;}
+        .container {max-width: 500px; margin: 40px auto;}
+        .card {background: white; padding: 30px; border-radius: 8px;}
+        input {width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;}
+        .btn {width: 100%; padding: 12px; background: #0066ff; color: white; border: none; border-radius: 5px;}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2>College Fee Management</h2>
+        <div>
+            <a href="/">🏠 Home page</a>
+            <a href="/register">📝 Register page</a>
+            <a href="/login">🌐 Login page</a>
+            <a href="/students">👨‍🎓 Students page</a>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Register</h2>
+        <div class="card">
+            <form method="POST">
+                <input type="text" name="fullname" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="mobile" placeholder="Mobile No." required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button class="btn">Register</button>
+            </form>
+            <p style="color:green">{{ msg }}</p>
+        </div>
+    </div>
+</body>
+</html>
